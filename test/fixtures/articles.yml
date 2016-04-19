@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyText
+primer_articulo:
+  title: Titulo 1
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam alias, ab excepturi porro quam provident qui saepe enim fugit impedit quos ratione debitis eligendi nemo accusantium quibusdam. Adipisci, magni, reiciendis.
 
 two:
-  title: MyString
-  body: MyText
+  title: Titulo 2
+  body: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nostrum amet, ad quasi, aperiam nobis eius ipsa sunt sed dolore exercitationem tempore adipisci, nam sapiente eos fugiat incidunt. Saepe, reprehenderit.

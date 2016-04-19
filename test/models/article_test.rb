@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
+  setup do
+    @article = articles(:primer_articulo)
+  end
+
   test "the truth" do
     assert true
   end
