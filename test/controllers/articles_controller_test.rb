@@ -36,6 +36,8 @@ class ArticlesControllerTest < ActionController::TestCase
 
   test "should show article" do
     get :show, id: @article
+    assert_select 'title', 'IntroTesting'
+    assert_select 'p', 3
     assert_response :success
   end
 
