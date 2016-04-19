@@ -8,6 +8,8 @@ class ArticlesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
+    assert_template :index
+    assert_template layout: 'layouts/application'
     assert_not_nil assigns(:articles)
   end
 
