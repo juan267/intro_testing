@@ -5,6 +5,14 @@ class ArticlesControllerTest < ActionController::TestCase
     @article = articles(:primer_articulo)
   end
 
+  test 'should create article' do
+    assert_difference('Article.count') do
+      post :create,  article: { body: @article.body, title: @article.title }
+    end
+    assert_redirected_to article_path(assigns(:article))
+    assert_equal 'Article was successfully created.', flash[:notice]
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -18,13 +26,13 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create article" do
-    assert_difference('Article.count') do
-      post :create, article: { body: @article.body, title: @article.title }
-    end
+  # test "should create article" do
+  #   assert_difference('Article.count') do
+  #     post :create, article: { body: @article.body, title: @article.title }
+  #   end
 
-    assert_redirected_to article_path(assigns(:article))
-  end
+  #   assert_redirected_to article_path(assigns(:article))
+  # end
 
   test "should show article" do
     get :show, id: @article
