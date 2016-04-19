@@ -15,4 +15,9 @@ class ArticleTest < ActiveSupport::TestCase
     assert true
   end
 
+  test 'should not save article with a body less than 140 characters' do
+    article = Article.new(title: "Hola")
+    assert_not article.save, 'Saved article with less than 140 characters'
+  end
+
 end
